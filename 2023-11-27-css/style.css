@@ -1,0 +1,47 @@
+/* 
+
+CSS sintaksė:
+
+selector {
+  property: value;
+} 
+
+*/
+
+h1 {
+  background-color: purple;
+  color: white;
+}
+
+div h3 {
+  color: red;
+}
+
+ol li {
+  color: green;
+}
+
+ul > li {
+  color: blue;
+}
+
+ol li:first-child {
+  color: red;
+}
+
+.color-red {
+  color: red;
+}
+
+strong.color-red {
+  color: rgb(240, 89, 89);
+}
+
+#headings-section {
+  background-color: green;
+  color: white;
+}
+
+.section-title {
+  font-size: 30px;
+}
