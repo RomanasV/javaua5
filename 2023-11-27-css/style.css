@@ -45,3 +45,12 @@ strong.color-red {
 .section-title {
   font-size: 30px;
 }
+
+[target] {
+  color: green;
+  text-transform: uppercase;
+}
+
+h5:hover {
+  background-color: bisque;
+}
