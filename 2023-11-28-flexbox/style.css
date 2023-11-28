@@ -1,0 +1,27 @@
+.container {
+  background-color: bisque;
+  width: 500px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
