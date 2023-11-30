@@ -7,10 +7,16 @@ body {
   margin: 0;
 }
 
+p {
+  font-size: 14px;
+}
+
 .container {
   max-width: 1230px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 a.button {
@@ -24,6 +30,13 @@ a.button {
   text-decoration: none;
 }
 
+.page-title {
+  font-size: 100px;
+  margin-top: 0;
+  margin-bottom: 23px;
+  line-height: 1.05;
+}
+
 .main-header {
   background-color: white;
 }
@@ -32,11 +45,13 @@ a.button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 50px;
 }
 
 .navigation-wrapper {
   display: flex;
   align-items: center;
+  column-gap: 15px;
 }
 
 .menu-list {
@@ -57,3 +72,22 @@ a.button {
 .menu-link:hover {
   opacity: .8;
 }
+
+.hero-section {
+  background-color: black;
+  color: white;
+}
+
+.hero-section-wrapper {
+  padding: 80px 100px 140px;
+}
+
+.hero-header-wrapper {
+  padding-bottom: 380px;
+}
+
+.hero-section-description {
+  max-width: 370px;
+  font-size: 20px;
+}
+
