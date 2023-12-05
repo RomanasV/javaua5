@@ -1,0 +1,282 @@
+:root {
+  --spacing-1: 15px;
+  --spacing-2: 30px;
+  --spacing-3: 45px;
+
+  --stats-item-width: calc((100% - var(--spacing-2)) / 2);
+
+  --color-primary: #1200ff;
+  --color-secondary: #FF00E9;
+
+  --color-secondary-light: rgb(255, 103, 242);
+  --color-primary-light: #6d62ff;
+  --color-white: white;
+  --color-black: black;
+  --color-light: rgb(193, 193, 193);
+  --color-dark: rgb(87, 87, 87);
+  --color-danger: red;
+
+  --color-success: var(--color-secondary);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  margin-bottom: 500px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-1);
+  padding-right: var(--spacing-1);
+}
+
+a.button {
+  background-color: var(--color-primary);
+  color: white;
+  display: inline-block;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 100px;
+  margin-top: 0;
+  margin-bottom: 23px;
+  line-height: 1.05;
+}
+
+.section-title {
+  margin-top: 0;
+  font-size: 72px;
+}
+
+.main-header {
+  background-color: white;
+}
+
+.main-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+  padding: 10px 0;
+}
+
+.navigation-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.menu-link {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.menu-link:hover {
+  opacity: .8;
+}
+
+.hamburger-button {
+  background: transparent;
+  height: 45px;
+  width: 50px;
+  display: none;
+  border: none;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-button span {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 25px;
+}
+
+.hero-section {
+  background-color: black;
+  color: white;
+}
+
+.hero-section-wrapper {
+  padding: 80px 100px 140px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 380px;
+}
+
+.hero-section-description {
+  max-width: 370px;
+  font-size: 20px;
+}
+
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+
+.service-item {
+  width: 50%;
+}
+
+.service-item:nth-of-type(odd) {
+  padding-right: 115px;
+}
+
+.service-item:nth-of-type(even) {
+  padding-left: 115px;
+  border-left: 2px solid white;
+}
+
+.service-title {
+  margin-top: 0;
+}
+
+.stats-section {
+  padding-top: 130px;
+  padding-bottom: 100px;
+}
+
+.stats-content {
+  padding-left: 200px;
+  padding-right: 170px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 90px;
+}
+
+.stats-content p {
+  max-width: 470px;
+}
+
+.stats-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  /* row-gap: 90px;
+  column-gap: 30px; */
+  gap: 90px var(--spacing-2);
+}
+
+.stats-item {
+  /* width: calc((100% - var(--spacing-2)) / 2); */
+  width: var(--stats-item-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-item-data {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.stats-item-data-small {
+  font-size: 72px;
+}
+
+@media screen and (max-width: 1100px) {
+  .navigation-wrapper {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .stats-content {
+    padding-right: 70px;
+    padding-left: 100px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .hero-section-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-header-wrapper {
+    max-width: 315px;
+  }
+
+  .page-title {
+    font-size: 50px;
+  }
+
+  .service-item:nth-of-type(even) {
+    padding-left: 50px;
+  }
+
+  .service-item:nth-of-type(odd) {
+    padding-right: 50px;
+  }
+
+  .stats-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-section-wrapper {
+    row-gap: 200px;
+  }
+
+  .service-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-item:nth-of-type(odd) {
+    padding-right: 0;
+  }
+  
+  .service-item:nth-of-type(even) {
+    padding-left: 0;
+    border: none;
+  }
+  
+  .stats-item {
+    width: 100%;
+  }
+}
