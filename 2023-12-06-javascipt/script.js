@@ -184,3 +184,130 @@ console.log(10 !== 10);
 console.log(true);
 console.log(!true);
 console.log(!!true);
+
+// AND / OR operators
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(false && false); // false
+
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || true); // true
+console.log(false || false); // false
+
+// CONDITIONS (sąlygos)
+let personAge = 17;
+
+if (personAge >= 18) {
+  console.log('Loterijos bilietą pirkti galima');
+} else {
+  console.log('Loterijos bilieto pirkti negalima');
+}
+
+if (personAge >= 18) {
+  console.log('Loterijos bilietą pirkti galima');
+} else if (personAge >= 16) {
+  console.log('Loterijos bilietą pirkti galima su tėvų sutikimu');
+} else {
+  console.log('Loterijos bilieto pirkti negalima');
+}
+
+// FUNCTIONS
+// Funkcijos sukūrimas:
+// 1. Iniciavimo žodelis (function)
+// 2. Pavadinimas
+// 3. Paprasti skliaustai () - funkcijos argumentams.
+// 4. Riestiniai skliaustai {} - funkcijos apibrėžimas
+
+function getPerimeter(height, width) {
+  let perimeter = (height + width) * 2;
+  return perimeter;
+}
+
+// Funkcijos iškvietimas
+// 1. Funkcijos pavadinimas
+// 2. Paprasti skliaustai ()
+
+console.log(getPerimeter(15, 10));
+
+let perimeterResult = getPerimeter(20, 50);
+console.log(perimeterResult);
+
+// ARROW FUNCTIONS
+
+// Įprasta funkcija
+function func1() {
+  return 2 + 2;
+}
+console.log(func1());
+
+// Įprasta funkcija su parametrais
+function func2(num1, num2) {
+  return num1 + num2;
+}
+console.log(func2(5, 5));
+
+// Sukuriams kintamasis ir jam, kaip reikšmė, priskiriama anoniminė funkcija
+const func3 = function(num1, num2) {
+  return num1 + num2;
+}
+console.log(func3(6, 6));
+
+// ARROW FUNCTIOn
+// 1. Sukurti kintamąjį
+// 2. Priskirti reikšmę:
+// 2.1. Paprasti skliaustai ()
+// 2.2. Arrow function =>
+// 2.3. Riestiniai skliaustai
+
+const arrowFunc1 = () => {
+  return 3 * 3;
+};
+console.log(arrowFunc1());
+
+const arrowFunc2 = (num1, num2) => {
+  return num1 * num2;
+}
+console.log(arrowFunc2(5, 5))
+
+const arrowFunc3 = (num) => {
+  return num * num;
+}
+console.log(arrowFunc3(6));
+
+// Jeigu arrow funkcija turi vieną parametrą, tai galima nerašyti paprastų skliaustų. Jeigu neturi nei vieno parametro arba jų turi daugiau nei vieną, tai paprasti skliaustai yra būtini.
+const arrowFunc4 = num => {
+  return num * num;
+}
+console.log(arrowFunc4(6));
+
+// Jeigu funkcijos veiksmas aprašomas vienoje eilutėje (arba funkciją grąžina reikšmę), tai galima nerašyti žodelio return ir riestinių skliaustų.
+const arrowFunc5 = num => num * num;
+console.log(arrowFunc5(6));
+
+// MASYVŲ METODAI
+const cities = ['Vilnius', 'Kaunas', 'Klaipėda', 'Šiaulia', 'Panevėžys'];
+
+// pop, push, shift ir unshift metodai modifikuoja (mutuoja) originalų masyvą.
+console.log(cities)
+
+// pop() metodas - pašalina paskutinį masyvo narį.
+// console.log(cities.pop());
+const lastCity = cities.pop();
+console.log(lastCity);
+
+// shift() metodas - pašalina pirmą masyvo narį.
+const firstCity = cities.shift();
+console.log(firstCity);
+
+// push() metodas - prideda naują narį (narius) į masyvo pabaigą.
+const pushCitiesLength = cities.push('Tauragė');
+console.log(pushCitiesLength);
+
+cities.push('Palanga', 'Nida');
+
+// unshift() metodas - prideda naują narį (narius) į masyvo pradžią.
+cities.unshift('Vilnius');
+
+console.log(cities);
