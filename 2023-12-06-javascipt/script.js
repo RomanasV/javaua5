@@ -10,14 +10,13 @@ let miestas = `Kaunas`;
 const asmensKodas = 3985564654112; // Number tipo kintamasis
 let yraStudentas = false;
 
-
 console.log(vardas);
 console.log(pavarde);
 console.log(miestas);
 console.log(asmensKodas);
 
 vardas = 'Steve';
-pavarde = 5;
+pavarde = 'Doe';
 
 console.log(vardas);
 console.log(pavarde);
@@ -86,3 +85,102 @@ console.log(asmensKodas, typeof asmensKodas);
 console.log(yraStudentas, typeof yraStudentas);
 console.log(student, typeof student);
 console.log(balai, typeof balai);
+
+console.log(vardas);
+console.log(pavarde);
+
+console.log('Asmens vardas yra: ' + vardas + ' ' + pavarde + '.');
+console.log("Asmens vardas yra: " + vardas + " " + pavarde + ".");
+console.log(`Asmens vardas yra: ${vardas} ${pavarde}.`);
+
+// John said: "Good morning".
+console.log('John said: "Good morning".');
+console.log(`John said: "Good morning".`);
+
+// John said: "That's my car".
+console.log(`John said: "That's my car".`);
+
+// John `said`: "That's my car".
+console.log('John `said`: "That\'s my car".');
+console.log("John `said`: \"That's my car\".");
+console.log(`John \`said\`: "That's my car".`);
+
+// John `said`: "That's \my\ car".
+console.log('John `said`: "That\'s \\my\\ car".');
+
+// John \`said\`: "That's my car".
+console.log(`John \\\`said\\\`: "That's my car".`);
+
+let str = 'Labas';
+console.log(str);
+console.log(str.length);
+console.log(str[0]);
+console.log(str.at(0));
+console.log(str[1]);
+console.log(str.at(1));
+
+console.log(str[str.length - 1]);
+console.log(str.at(-1));
+console.log(str.at(-2));
+
+console.log(str.endsWith('as'));
+console.log(str.endsWith('ba'));
+
+console.log(str.includes('laba'));
+console.log(str.includes('sveikas'));
+
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+// Matematiniai operatoriai
+let num1 = 22;
+let num2 = 10;
+let num3 = '10';
+
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+console.log(num1 % num2);
+
+console.log(num1 + num2 * num2);
+console.log((num1 + num2) * num2);
+
+console.log(num1 + num3);
+console.log(num1 - num3);
+console.log(num1 * num3);
+console.log(num1 / num3);
+console.log(num1 % num3);
+
+console.log(num1 + num3 * num3);
+console.log((num1 + num3) * num3);
+
+// SĄLYGOS
+// Dviguba lygybė (loosely equal ==): tikrina TIK reikšmes ir nekreipia dėmesio į duomenų tipą.
+console.log(10 == 10); // true
+console.log('vienas' == 'vienas'); // true
+console.log('10' == '10'); // true
+console.log(10 == '10'); // true
+
+// Triguba lygybė (strictly equal ===): pirmiausiai tikrina ar sutampa duomenų tipai, o tada tikrina reikšmes.
+console.log(10 === 10); // true
+console.log('vienas' === 'vienas'); // true
+console.log('10' === '10'); // true
+console.log(10 === '10'); // false
+
+console.log({} == {}); // false
+
+console.log(10 > 10);
+console.log(10 < 10);
+console.log(10 >= 10);
+console.log(10 <= 10);
+
+console.log(10 == 10);
+console.log(10 != 10);
+
+console.log(10 === 10);
+console.log(10 !== 10);
+
+console.log(true);
+console.log(!true);
+console.log(!!true);
