@@ -369,3 +369,60 @@ let splicedNums = nums.splice(0, 0, -5); // unshift
 
 console.log(splicedNums);
 console.log(nums);
+
+const numsArr = [1, 2, 3, 4, 5, 6, 10, 15, 20, 30];
+console.log(numsArr);
+
+for (let i = 0; i < numsArr.length; i++) {
+  console.log(i);
+  console.log('for ciklas:',numsArr[i]);
+}
+
+numsArr.map(function(num, index, arr) {
+  console.log(index);
+  console.log('map ciklas:', num);
+  console.log(arr);
+});
+
+numsArr.forEach(function(num, index, arr) {
+  console.log(index);
+  console.log('forEach ciklas:', num);
+  console.log(arr);
+});
+
+
+numsArr.map((num, index, arr) => {
+  console.log(index);
+  console.log('map ciklas:', num);
+  console.log(arr);
+});
+
+numsArr.forEach((num, index, arr) => {
+  console.log(index);
+  console.log('forEach ciklas:', num);
+  console.log(arr);
+});
+
+
+// Map - grąžina reikšmę
+// forEach - negrąžina reikšmės
+
+// const mapArr = numsArr.map((num) => {
+//   return num * num;
+// })
+
+const mapArr = numsArr.map(num => num * num).reverse();
+console.log(mapArr);
+
+const forEachArr = numsArr.forEach(num => num * num);
+console.log(forEachArr);
+
+
+
+// FILTER
+// const filteredArr = numsArr.filter((num) => {
+//   return num > 10;
+// });
+
+const filteredArr = numsArr.filter(num => num > 7 && num % 2 === 0);
+console.log(filteredArr);
