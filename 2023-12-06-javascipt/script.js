@@ -311,3 +311,61 @@ cities.push('Palanga', 'Nida');
 cities.unshift('Vilnius');
 
 console.log(cities);
+
+let countries = ['Lithuania', 'Latvia', 'Poland', 'France', 'Germany', 'Italy'];
+// Index              0          1         2          3         4         5
+// Slice (+)    0           1         2         3         4          5        6
+// Slice (-)   -6          -5        -4        -3        -2         -1        
+
+// SLICE - nemutuoja (nemodifikuoja) originalaus masyvo
+console.log('-----------SLICE-------------');
+console.log(countries);
+let slicedCountries1 = countries.slice();
+console.log(slicedCountries1);
+let slicedCountries2 = countries.slice(0);
+console.log(slicedCountries2);
+let slicedCountries3 = countries.slice(2);
+console.log(slicedCountries3);
+let slicedCountries4 = countries.slice(2, 4);
+console.log(slicedCountries4);
+let slicedCountries5 = countries.slice(0, 3);
+console.log(slicedCountries5);
+let slicedCountries6 = countries.slice(-4);
+console.log(slicedCountries6);
+let slicedCountries7 = countries.slice(-4, -2);
+console.log(slicedCountries7);
+let slicedCountries8 = countries.slice(-4, 2);
+console.log(slicedCountries8);
+let slicedCountries9 = countries.slice(-3, 2);
+console.log(slicedCountries9);
+let slicedCountries10 = countries.slice(2, -2);
+console.log(slicedCountries10);
+let slicedCountries11 = countries.slice(-2, -4);
+console.log(slicedCountries11);
+let slicedCountries12 = countries.slice(4, 2);
+console.log(slicedCountries12);
+
+// SPLICE - modifikuoja (mutuoja) originalų masyvą
+let nums = [1, 2, 3, 4, 5, 6, 7, 10];
+
+console.log(nums);
+
+// let splicedNums = nums.splice(0);
+// let splicedNums = nums.splice(2);
+// let splicedNums = nums.splice(0, 1);
+// let splicedNums = nums.splice(0, 3);
+// let splicedNums = nums.splice(2, 3);
+// let splicedNums = nums.splice(2, 1);
+// let splicedNums = nums.splice(-1);
+// let splicedNums = nums.splice(-3, 2);
+// let splicedNums = nums.splice(-3, 2, 2);
+// let splicedNums = nums.splice(2, 2, 2.5);
+// let splicedNums = nums.splice(2, 0, 2.5);
+// let splicedNums = nums.splice(2, 0, 2.5, 2.8, 2.9);
+// let splicedNums = nums.splice(-1); // pop
+// let splicedNums = nums.splice(0, 1); // shift
+// let splicedNums = nums.splice(nums.length, 0, 20); // push
+let splicedNums = nums.splice(0, 0, -5); // unshift
+
+console.log(splicedNums);
+console.log(nums);
