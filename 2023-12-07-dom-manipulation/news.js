@@ -80,6 +80,52 @@ function newsItem(data) {
 }
 
 function pageContent() {
+  const newsList = [
+    {
+      title: 'Ar „ChatGPT“ užims mūsų darbo vietas?',
+      url: '#',
+      category: 'AI & Deep Learning',
+      imageUrl: 'dogs.webp'
+    },
+    {
+      title: 'Įmonių kova dėl IT specialistų: kaip sėkmingai atrasti savo talentus?',
+      date: '2023-09-02',
+      url: '#',
+      imageUrl: 'https://codeacademy.lt/wp-content/uploads/2022/12/2022_11_10-Code-Academy-221-1024x683.jpg',
+      category: 'Naujienos',
+    },
+    {
+      title: 'Ar „ChatGPT“ užims mūsų darbo vietas?',
+      url: '#',
+      category: 'AI & Deep Learning',
+      imageUrl: 'dogs.webp',
+      date: '2024-01-01'
+    },
+    {
+      title: 'Įmonių kova dėl IT specialistų: kaip sėkmingai atrasti savo talentus?',
+      date: '2023-09-02',
+      url: '#',
+      imageUrl: 'https://codeacademy.lt/wp-content/uploads/2022/12/2022_11_10-Code-Academy-221-1024x683.jpg',
+      category: 'Naujienos',
+    },
+    {
+      title: 'Ar „ChatGPT“ užims mūsų darbo vietas?',
+      url: '#',
+      category: 'AI & Deep Learning',
+      imageUrl: 'dogs.webp'
+    },
+    {
+      title: 'Įmonių kova dėl IT specialistų: kaip sėkmingai atrasti savo talentus?',
+      date: '2023-09-02',
+      url: '#',
+      imageUrl: 'https://codeacademy.lt/wp-content/uploads/2022/12/2022_11_10-Code-Academy-221-1024x683.jpg',
+      category: 'Naujienos',
+    },
+  ];
+
+  const mainNewsList = newsList.slice(0, 2);
+  const secondaryNewsList = newsList.slice(2);
+
   const contentElement = document.createElement('div');
   contentElement.classList.add('content-wrapper');
 
@@ -92,57 +138,18 @@ function pageContent() {
   const mainNewsElement = document.createElement('div');
   mainNewsElement.classList.add('main-news');
 
-  const mainNewsItem1 = newsItem({
-    title: 'Ar „ChatGPT“ užims mūsų darbo vietas?',
-    url: '#',
-    category: 'AI & Deep Learning',
-    imageUrl: 'dogs.webp'
-  });
-  
-  const mainNewsItem2 = newsItem({
-    title: 'Įmonių kova dėl IT specialistų: kaip sėkmingai atrasti savo talentus?',
-    date: '2023-09-02',
-    url: '#',
-    imageUrl: 'https://codeacademy.lt/wp-content/uploads/2022/12/2022_11_10-Code-Academy-221-1024x683.jpg',
-    category: 'Naujienos',
-  });
-
-  mainNewsElement.append(mainNewsItem1, mainNewsItem2);
+  mainNewsList.forEach(data => {
+    const newsItemElement = newsItem(data);
+    mainNewsElement.append(newsItemElement);
+  })
   
   const secondaryNewsElement = document.createElement('div');
   secondaryNewsElement.classList.add('secondary-news');
 
-  const secondaryNewsItem1 = newsItem({
-    title: 'Ar „ChatGPT“ užims mūsų darbo vietas?',
-    url: '#',
-    category: 'AI & Deep Learning',
-    imageUrl: 'dogs.webp'
-  });
-  
-  const secondaryNewsItem2 = newsItem({
-    title: 'Įmonių kova dėl IT specialistų: kaip sėkmingai atrasti savo talentus?',
-    date: '2023-09-02',
-    url: '#',
-    imageUrl: 'https://codeacademy.lt/wp-content/uploads/2022/12/2022_11_10-Code-Academy-221-1024x683.jpg',
-    category: 'Naujienos',
-  });
-
-  const secondaryNewsItem3 = newsItem({
-    title: 'Ar „ChatGPT“ užims mūsų darbo vietas?',
-    url: '#',
-    category: 'AI & Deep Learning',
-    imageUrl: 'dogs.webp'
-  });
-  
-  const secondaryNewsItem4 = newsItem({
-    title: 'Įmonių kova dėl IT specialistų: kaip sėkmingai atrasti savo talentus?',
-    date: '2023-09-02',
-    url: '#',
-    imageUrl: 'https://codeacademy.lt/wp-content/uploads/2022/12/2022_11_10-Code-Academy-221-1024x683.jpg',
-    category: 'Naujienos',
-  });
-
-  secondaryNewsElement.append(secondaryNewsItem1, secondaryNewsItem2, secondaryNewsItem3, secondaryNewsItem4);
+  secondaryNewsList.forEach(data => {
+    const newsItemElement = newsItem(data);
+    secondaryNewsElement.append(newsItemElement);
+  })
 
   newsSection.append(mainNewsElement, secondaryNewsElement);
 
